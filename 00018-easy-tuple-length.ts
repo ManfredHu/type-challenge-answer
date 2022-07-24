@@ -15,4 +15,4 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type Length<T> = 
+type Length<T extends readonly any[]> = T['length']
