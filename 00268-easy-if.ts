@@ -16,6 +16,6 @@ type If<C extends boolean, T, F> = C extends true ? T : F
 // ============= 知识点 =============
 // 1. X extends boolean 可以判断X是否boolean,同理其他类型也可以，比如下面的isNumber
 type isNumber<T> = T extends number ? true: false
-type testCases = [
+type cases2 = [
   Expect<Equal<isNumber<5>, true>>,
 ]
