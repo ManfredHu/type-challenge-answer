@@ -18,3 +18,7 @@ type Replace<S extends string, From extends string, To extends string> =
   : S extends `${infer A}${From}${infer B}` 
     ? `${A}${To}${B}`
     : S
+
+// =================================================================
+// 知识点
+// 1. 切割字符串为三段式
