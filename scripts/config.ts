@@ -1,0 +1,1 @@
+export const basePath = 'https://github.com/ManfredHu/type-challenge-answer/tree/master/'
