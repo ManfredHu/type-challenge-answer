@@ -7,5 +7,5 @@ type cases = [
 ]
 
 
-// ============= Your Code Here =============
+// ignore generated code below this line
 type HelloWorld = string

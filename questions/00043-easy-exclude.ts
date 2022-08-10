@@ -9,4 +9,9 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type MyExclude<T, U> = T extends U ? never : T 
+type MyExclude<T, U> = T extends U ? never : T
+
+// 知识点
+// 1. Excludes 满足分配律，比如以下两个相等
+type case2 = Exclude<'a' | 'b' | 'c', 'a' | 'b'>
+type case3 = Exclude<'a', 'a' | 'b'> | Exclude<'b', 'a' | 'b'> | Exclude<'c', 'a' | 'b'>
