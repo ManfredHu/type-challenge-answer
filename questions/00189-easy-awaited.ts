@@ -22,3 +22,5 @@ type MyAwaited<T extends Promise<unknown>> = T extends Promise<infer R>
     ? MyAwaited<R> // recursive 
     : R
   : never;
+
+//

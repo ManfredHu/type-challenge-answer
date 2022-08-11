@@ -24,6 +24,6 @@ const fn1 = (v: boolean, w: any) => v ? 1 : 2
 // ============= Your Code Here =============
 type MyReturnType<T extends (...args: any) => any> = T extends (...args: any[]) => infer R ? R: never
 
-// ============= 知识点 =============
+// 知识点
 // 1. (...args: any) => any 表示函数 
 // 2. 同理 (...args: any) => infer R 可以获取到返回的结果类型

@@ -37,3 +37,5 @@ type cases = [
 
 // ============= Your Code Here =============
 type MyCapitalize<S extends string> = S extends `${infer F}${infer Rest}` ? `${Uppercase<F>}${Rest}`: S
+
+//

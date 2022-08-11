@@ -17,7 +17,7 @@ type cases = [
 // ============= Your Code Here =============
 type Length<T extends readonly any[]> = T['length']
 
-// ============= 知识点 =============
+// 知识点
 // 1. T['length'] 可以获取一个数组/元组的长度
 // 2. T['length'] 与 T[number] 的区别
 //    2.1 一个是获取数组/元组长度，一个是遍历其值，length是数组的长度，而[number]是遍历其值的索引

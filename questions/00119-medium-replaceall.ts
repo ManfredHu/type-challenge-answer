@@ -24,7 +24,6 @@ type ReplaceAll<S extends string, From extends string, To extends string> =
       : `${F}${To}${ReplaceAll<L, From, To>}`
     : S
 
-// =================================================================
 // 知识点
 // 1. 空字符串直接返回
 // 2. 其他字符串切割为三段，比如 foobarfoo, 替换From=bar 为 To=foo，则 ${infer F}${From}${infer L} 输入会切割为 F=foo From=bar L=foo

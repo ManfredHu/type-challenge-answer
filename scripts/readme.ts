@@ -3,7 +3,7 @@ import { globby } from "globby";
 import debug from 'debug'
 import path from 'path'
 import { DifficultyColors, DifficultyRank, toBadgeLink } from "./third-party";
-import { basePath } from './config'
+import { basePath, questionGlob } from './config'
 const _debug = debug(`log:${path.basename(__filename)}`)
 
 type Rank = typeof DifficultyRank[number]
@@ -12,7 +12,7 @@ type FilesByRank = {
 };
 const allQuestionsWithRank: FilesByRank = {};
 async function getFilesByRank() {
-  let packages = await globby(["questions/*.ts", "!questions/test-utils.ts"]);
+  const packages = await globby(questionGlob);
 
   const fileWithRank = packages.reduce((acc: FilesByRank, cur: string) => {
     const level = cur.split("/")[1].split("-")[1] as Rank

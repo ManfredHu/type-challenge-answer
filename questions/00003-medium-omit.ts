@@ -25,14 +25,13 @@ interface Expected2 {
 }
 
 
-// ============= Your Code Here =============
 // type MyOmit<T, K extends keyof T> = {
 //   [P in Exclude<keyof T, K>]: T[P]
 // }
-
+// ============= Your Code Here =============
 type MyOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
-// ============= 知识点 =============
+// 知识点
 // 1. keyof
 // 2. Exclude 可以用在key的位置
 // 3. Pick/Omit都是返回的新的对象类型，Includes/Exclude都是返回的tuple类型

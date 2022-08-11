@@ -57,7 +57,7 @@ type DeepReadonly<T> = {
   readonly [P in keyof T]: keyof T[P] extends never ? T[P]: DeepReadonly<T[P]>
 }
 
-// ============= 知识点 =============
+// 知识点
 // 1. Function extends Object, 这与JS里(() => {}) instanceof Object一样，但是
 type TestObject<T> = T extends Object ? true: false
 type case2 = [

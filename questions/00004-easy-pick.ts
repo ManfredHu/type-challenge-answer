@@ -29,7 +29,7 @@ type MyPick<T, K extends keyof T> = {
   [P in K]: T[P]
 }
 
-// ============= 知识点 =============
+// 知识点
 // 1. extends
 // 2. keyof
 // 3. [P in K] 可以重新定义一个对象，比如配合readonly或者?:等
