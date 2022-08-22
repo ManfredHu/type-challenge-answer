@@ -38,4 +38,7 @@ type cases = [
 // ============= Your Code Here =============
 type MyCapitalize<S extends string> = S extends `${infer F}${infer Rest}` ? `${Uppercase<F>}${Rest}`: S
 
-//
+// 知识点
+// 1. Capitalize / Capitalize ts都是内置的方法，可以直接使用
+type test = Capitalize<'football'>
+type test2 = Uncapitalize<'FootBall'>
