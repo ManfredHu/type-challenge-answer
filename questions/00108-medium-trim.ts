@@ -1,5 +1,6 @@
 // ============= Test Cases =============
 import type { Equal, Expect } from './test-utils'
+import { Space } from './00106-medium-trimleft'
 
 type cases = [
   Expect<Equal<Trim<'str'>, 'str'>>,
@@ -14,7 +15,6 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type Space = ' ' | '\n' | '\t'
 type Trim<S extends string> = S extends `${Space}${infer R}` | `${infer R}${Space}` ? Trim<R>: S
 
 // 知识点
