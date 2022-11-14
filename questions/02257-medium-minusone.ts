@@ -29,7 +29,7 @@ type MultiplyTenTimes<T extends string[]> = [...T, ...T, ...T, ...T, ...T, ...T,
 
 // 转化字符串数字 T 为对应长度的数组
 // 13 -> ['', '', '', '', '', '', '', '', '', '', '', '', '']
-type NumStrToArray<T extends string, Rst extends string[] = []> = T extends `${infer F}${infer Rest}`
+export type NumStrToArray<T extends string, Rst extends string[] = []> = T extends `${infer F}${infer Rest}`
                                                                     ? F extends keyof NumDict
                                                                       ? NumStrToArray<Rest, [...MultiplyTenTimes<Rst>, ...NumDict[F]]>
                                                                       : NumStrToArray<Rest, [...Rst]>
