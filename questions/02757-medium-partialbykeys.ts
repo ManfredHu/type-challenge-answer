@@ -1,5 +1,5 @@
 // ============= Test Cases =============
-import type { Equal, Expect } from './test-utils'
+import type { Equal, Expect, MergeObj } from './test-utils'
 
 interface User {
   name: string
@@ -28,10 +28,6 @@ type cases = [
 
 
 // ============= Your Code Here =============
-// 用于再一次合并，比如 T = a & b 会遍历a和b的key合并为一个 T = c = a & b
-export type MergeObj<T> = {
-  [K in keyof T]: T[K]
-}
 type PartialByKeys<T, K extends PropertyKey = keyof T> = MergeObj<Partial<T> & Omit<T, K>>
 
 // @answer-end

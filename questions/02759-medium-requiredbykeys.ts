@@ -1,6 +1,5 @@
 // ============= Test Cases =============
-import type { Equal, Expect } from './test-utils'
-import { MergeObj } from './02757-medium-partialbykeys'
+import type { Equal, Expect, MergeObj } from './test-utils'
 
 interface User {
   name?: string

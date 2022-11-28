@@ -1,3 +1,7 @@
+// 用于再一次合并，比如 T = a & b 会遍历a和b的key合并为一个 T = c = a & b
+export type MergeObj<T> = {
+  [K in keyof T]: T[K]
+}
 export type Expect<T extends true> = T
 export type ExpectTrue<T extends true> = T
 export type ExpectFalse<T extends false> = T
