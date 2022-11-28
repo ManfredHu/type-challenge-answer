@@ -1,6 +1,6 @@
 // ============= Test Cases =============
 import type { Equal, Expect } from './test-utils'
-import { Merge } from './02757-medium-partialbykeys'
+import { MergeObj } from './02757-medium-partialbykeys'
 
 interface User {
   name?: string
@@ -29,7 +29,7 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type RequiredByKeys<T, K extends PropertyKey = keyof T> = Merge<Required<Pick<T, K extends keyof T ? K : never>> & Omit<T, K>>
+type RequiredByKeys<T, K extends PropertyKey = keyof T> = MergeObj<Required<Pick<T, K extends keyof T ? K : never>> & Omit<T, K>>
 
 // 知识点
 namespace t2759 {
@@ -37,9 +37,9 @@ namespace t2759 {
   // 首先是让 Required 的 key 转化为 必须
   type t1 = Required<Pick<User, 'name'>>
   // 从下面例子知道，其实 必选: 优先级是高于 可选 ?:
-  type t2 = Merge<{ a: string } & { a?: string }>
+  type t2 = MergeObj<{ a: string } & { a?: string }>
   // 第二步是合并两个对象类型通过Merge重新合为一个，这个也不用再Pick/Omit特殊过滤了，因为必选不管在前后必然生效
-  type t3 = Merge<User & t1>
+  type t3 = MergeObj<User & t1>
 
   // 得到临时答案
   // type t4<T, K extends PropertyKey = keyof T> = Merge<Required<Pick<T, K>> & Omit<T, K>>

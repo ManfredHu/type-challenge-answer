@@ -19,7 +19,7 @@ type cases = [
 type PickByType<T, U> = {
   [K in keyof T as T[K] extends U ? K: never]: T[K]
 }
-type b = PickByType<Model, boolean>
+
 // 知识点
 namespace t2595 {
   // 1. 从 Remove Index Signature
