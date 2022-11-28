@@ -17,6 +17,7 @@ type Without<T, U> = T extends [infer F, ...infer Rest]
                     : T
 
 
+// @answer-end
 // 知识点
 namespace t5117 {
   // 1. 如何判断某个元素等于某一项（第一个case👆）或数组内某一项，用 ArrToUnion

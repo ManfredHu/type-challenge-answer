@@ -18,6 +18,7 @@ type Flatten<T extends unknown[], Result extends unknown[] = []> = T extends [in
     : Flatten<R, [...Result, F]>
   : Result
 
+// @answer-end
 // 知识点
 // 1. X extends [infer F, ...R] 的用法，对于空数组和非空数组是不同的
 type TestInfer<N extends unknown[]> = N extends [infer F, ...infer R] ? true : false

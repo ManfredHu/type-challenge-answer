@@ -40,6 +40,7 @@ type GetPercentSuffix<T extends string> = T extends `${infer _}%` ? '%': ''
 type GetPercentNum<T extends string> = T extends `${GetFirstOperation<T>}${infer Num}${GetPercentSuffix<T>}` ? Num: ''
 type PercentageParser<T extends string> = [GetFirstOperation<T>, GetPercentNum<T>, GetPercentSuffix<T>]
 
+// @answer-end
 // 知识点
 namespace t1978 {
   // 1. 首先TS类型没有正则，只能递归字符串，但是注意看特征，最长结构是 -100%这样的三段式，而且没有 +01% 这样的异常case，所以用特征即可 <opperation><number>%

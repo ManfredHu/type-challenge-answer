@@ -25,6 +25,7 @@ type cases = [
 // ============= Your Code Here =============
 type Diff<O, O1> = Omit<O & O1, keyof (O | O1)>
 
+// @answer-end
 // 知识点
 // 1. 分析，就是两个圈求非公共部分
 // 2. 熟练使用& 和 Omit

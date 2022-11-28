@@ -20,6 +20,7 @@ type PickByType<T, U> = {
   [K in keyof T as T[K] extends U ? K: never]: T[K]
 }
 
+// @answer-end
 // 知识点
 namespace t2595 {
   // 1. 从 Remove Index Signature

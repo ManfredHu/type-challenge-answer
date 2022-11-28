@@ -11,6 +11,7 @@ type cases = [
 // ============= Your Code Here =============
 type MyExclude<T, U> = T extends U ? never : T
 
+// @answer-end
 // 知识点
 // 1. Excludes 满足分配律，比如以下两个相等
 type case2 = Exclude<'a' | 'b' | 'c', 'a' | 'b'>

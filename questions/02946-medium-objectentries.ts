@@ -23,6 +23,7 @@ type ObjectEntries<T> = {
   [K in keyof T]-?: [K, T[K] extends undefined ? T[K]: Exclude<T[K], undefined>]
 }[keyof T]
 
+// @answer-end
 // 知识点
 namespace t2946 {
   // 1. 对象如何转 union type?

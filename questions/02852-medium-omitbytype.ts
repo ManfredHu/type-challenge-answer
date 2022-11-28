@@ -20,5 +20,6 @@ type OmitByType<T, U> = {
   [K in keyof T as T[K] extends U ? never: K]: T[K]
 }
 
+// @answer-end
 // 知识点
 // 与 2595 PickByType类似的题目

@@ -29,6 +29,7 @@ type MyPick<T, K extends keyof T> = {
   [P in K]: T[P]
 }
 
+// @answer-end
 // 知识点
 // 1. extends
 // 2. keyof

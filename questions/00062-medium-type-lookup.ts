@@ -28,6 +28,7 @@ type LookUp<T extends { type: any }, U extends T["type"]> = T extends {
   ? T
   : never;
 
+// @answer-end
 // 知识点
 // 1. 联合类型会一个个验证，可以当作一个个体的类型 Animal = Cat，而不是 Aniaml = [Cat, Dog]
 // 2. U extends T["type"] 精确缩小了参数 U 范围，可以学到的是，之前定义的泛型 T 可以直接被后面的新泛型使用

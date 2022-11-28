@@ -34,6 +34,7 @@ type RemoveIndexSignature<T> = {
 }
 
 
+// @answer-end
 // 知识点
 namespace t1367 {
   // 1. keyof { [key: string]: any } 会得到 string | number，原因在ts2.9更新有写

@@ -10,5 +10,6 @@ type cases = [
 // ============= Your Code Here =============
 type TupleToUnion<T extends any[]> = T[number]
 
+// @answer-end
 // 知识点
 // 1. 元组tuple和数组类似，都可以用 T[number] 得到所有的子项

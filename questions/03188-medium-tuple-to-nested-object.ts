@@ -19,6 +19,7 @@ type TupleToNestedObject<T extends any[], U, R = U> = T extends [] ? R: (
     : never
 )
 
+// @answer-end
 // 知识点
 namespace t3188 {
   // 1. 第一个参数是数组，按照 ['a', 'b', 'c'] 的顺序，应该按照如下构建顺序，也就是尾递归

@@ -16,7 +16,7 @@ type cases = [
 // ============= Your Code Here =============
 type TrimRight<S extends string> = S extends `${infer F}${Space}` ? TrimRight<F>: S
 
-// 
+// @answer-end
 namespace t4803 {
   // 1. it looks like F can be infer to 'kvm' which is start string
   type t1<S extends string> = S extends `${infer F}${Space}` ? F: never

@@ -20,6 +20,7 @@ type IsTuple<T> = [T] extends [never] ? false
                                         : false
                                       
 
+// @answer-end
 // 知识点
 namespace t4484 {
   // 1. from https://www.w3schools.com/typescript/typescript_tuples.php

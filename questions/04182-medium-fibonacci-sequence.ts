@@ -13,6 +13,7 @@ type Fibonacci<T extends number, N extends 1[] = [1], Sub1 extends 1[] = [], Sub
   ? [...Sub1, ...Sub2]['length']
   : Fibonacci<T, [...N, 1], [...Sub1, ...Sub2], Sub1>
 
+// @answer-end
 // 知识点
 namespace t4182 {
   // 1. 斐波那契数列基准条件

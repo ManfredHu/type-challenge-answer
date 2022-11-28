@@ -18,6 +18,7 @@ type DropChar<S extends string, C extends string> = S extends `${infer F}${infer
                                                     ? `${F extends C ? '': F}${DropChar<Rest, C>}`
                                                     : ''
 
+// @answer-end
 // 知识点
 namespace t2070 {
   // 给一个奇怪的现象，百思不得姐

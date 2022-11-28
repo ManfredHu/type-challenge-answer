@@ -11,6 +11,7 @@ type cases = [
 // ============= Your Code Here =============
 export type Reverse<T extends any[]> = T extends [...infer Rest, infer End] ? [End, ...Reverse<Rest>]: T
 
+// @answer-end
 // 知识点
 // 1. 很容易得到如下答案，但是多了一个 K 作为临时变量存储
 // type Reverse<T, K extends any[] = []> = T extends [infer F, ...infer Rest] ? Reverse<Rest, [F, ...K]>: K

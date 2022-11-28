@@ -13,6 +13,7 @@ type cases = [
 // ============= Your Code Here =============
 type LengthOfString<S extends string, T extends any[] = []> = S extends `${infer F}${infer L}` ? LengthOfString<L, [...T, F]>: T['length']
 
+// @answer-end
 // 知识点
 // 1. 形如下面的可以得到长度
 type GetArrLen = ['a', 'b', 'c']['length']

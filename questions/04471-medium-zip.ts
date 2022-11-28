@@ -17,6 +17,7 @@ type Zip<T, U> = T extends [infer F, ...infer R]
                   : []
                 : []
 
+// @answer-end
 // 知识点
 namespace t4471 {
   // 1. 题意是两两组合，所以都取第一个即可，剩下的递归即可

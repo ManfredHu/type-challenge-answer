@@ -34,6 +34,7 @@ export type MergeObj<T> = {
 }
 type PartialByKeys<T, K extends PropertyKey = keyof T> = MergeObj<Partial<T> & Omit<T, K>>
 
+// @answer-end
 // 知识点
 namespace t2757 {
   // 首先这道题跟 Partial 类似，最后一个例子其实不传入参数就是 Partial

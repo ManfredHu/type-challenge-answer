@@ -22,6 +22,7 @@ type cases = [
 type Falsy = '' | never | undefined | null | 0 | false | [] | Record<PropertyKey, never>
 type AnyOf<T extends readonly any[]> = T extends Falsy[] ? false: true
                                       
+// @answer-end
 // 知识点
 // 1. 题意是AnyOf有一个为真就返回true，如果都是假就是false。如何判真？TS不是js，没有!!或者if等操作符，所以自己写个 Flasy
 // 2. {} [] 如何判断，都可以用 extends， 但是注意判断空对象要用 Record<string | number | symbol, never> 而不是 {}

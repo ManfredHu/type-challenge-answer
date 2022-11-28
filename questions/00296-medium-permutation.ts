@@ -17,6 +17,7 @@ type Permutation<T, U = T> = [T] extends [never]
     : never
 
 
+// @answer-end
 // 知识点
 namespace t00296 {
   // 1. tuple to array 

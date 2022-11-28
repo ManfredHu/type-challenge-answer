@@ -18,6 +18,7 @@ type cases = [
 // ============= Your Code Here =============
 type Absolute<T extends number | string | bigint> = `${T}` extends `-${infer N}` ? `${N}` : `${T}`
 
+// @answer-end
 // 知识点
 // 1. 字符串模板，将number转化为string，其实本质是基于字符串认定的
 // 2. 对于 Absolute<-1_000_000n> 这种，-1_000_000n是bigint类型的

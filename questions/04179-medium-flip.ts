@@ -14,6 +14,7 @@ type Flip<T extends Record<PropertyKey, string | number | boolean>> = {
   [K in keyof T as `${T[K]}`]: K
 }
 
+// @answer-end
 // 知识点
 namespace t4179 {
   // 1. 根据 K in keyof T as T[K] 很容易将 key 和 value 交换位置 

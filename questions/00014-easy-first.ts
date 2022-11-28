@@ -17,8 +17,9 @@ type errors = [
 
 
 // ============= Your Code Here =============
-type First<T extends any[]> = T extends [infer F, ...infer Rest] ? F: never
+type First<T extends any[]> = T extends [infer F, ...unknown[]] ? F: never
 
+// @answer-end
 // 知识点
 // 1. infer X 推断一个值
 // 2. ...infer Rest 推断剩余参数

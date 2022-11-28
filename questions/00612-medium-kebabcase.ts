@@ -23,6 +23,7 @@ type KebabCase<S extends string> = S extends `${infer F}${infer R}`
                                       : `${Lowercase<F>}-${KebabCase<R>}` // R 首字母大写
                                     : S // 空字符串
 
+// @answer-end
 // 知识点
 // 1. S extends `${infer F}${infer R}` 会不断匹配，如 'FooBarBaz' 会一次拆为 'F' + 'ooBarBaz' / 'Fo' + 'oBarBaz' / 'Foo' + 'BarBaz' 等等
 // 2. 切入点是大写字符[A-Z]作为分割点，那么如何找到大写[A-Z]呢？答案是用 R extends Uncapitalize<R> 判断剩余的R是否全是小写

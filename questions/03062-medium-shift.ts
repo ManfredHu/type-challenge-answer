@@ -13,4 +13,4 @@ type error = [
 // ============= Your Code Here =============
 type Shift<T extends Array<any>> = T extends [infer _, ...infer Rest] ? Rest: T
 
-// 
+// @answer-end

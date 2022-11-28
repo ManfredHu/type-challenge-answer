@@ -11,6 +11,7 @@ type cases = [
 // ============= Your Code Here =============
 type BEM<B extends string, E extends string[], M extends string[]> = `${B}${E extends [] ? '':  `__${E[number]}`}${M extends [] ? '': `--${M[number]}`}`
 
+// @answer-end
 // 知识点
 namespace t3326 {
   // 1. 很明显这是笛卡尔乘积，根据 B * E * M 得到最后穷举出来的不同答案，问题是 array 要如何穷举出来，很容易想到 array[number]

@@ -17,5 +17,6 @@ type cases = [
 // ============= Your Code Here =============
 type Trim<S extends string> = S extends `${Space}${infer R}` | `${infer R}${Space}` ? Trim<R>: S
 
+// @answer-end
 // 知识点
 // 1. 对比 trim left 的区别就是，S extends A|B 这种思维，左右空格可以用两个union type覆盖到

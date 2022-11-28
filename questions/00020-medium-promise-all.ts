@@ -17,6 +17,7 @@ declare function PromiseAll<T extends unknown[]>(values: readonly [...T]): Promi
   [K in keyof T]: T[K] extends Promise<infer R> ? R: T[K]
 }>
 
+// @answer-end
 // 知识点
 // 1. 获取Promise的返回类型 Promise<infer R>
 // 2. [] as const 会转化为readonly元组类型，对应参数也要约束为readonly.但可以通过 readonly [...T] 得到原值

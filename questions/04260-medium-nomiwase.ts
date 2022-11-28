@@ -16,6 +16,7 @@ type AllCombinations<S extends string, U extends string = StrToUnion<S>> = [U] e
   [K in U]: `${K}${AllCombinations<never, Exclude<U, K>>}`
 }[U] | ''
 
+// @answer-end
 // 知识点
 namespace t4260 {
   // 1. String to union coversion

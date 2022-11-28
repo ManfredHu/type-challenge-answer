@@ -26,6 +26,7 @@ type FlattenDepth<T extends unknown[], L extends number = 1, K extends unknown[]
       ? T
       : FlattenDepth<FlattenOnce<T>, L, [...K, unknown]>
 
+// @answer-end
 // 知识点
 namespace t3243 {
   // 1. 发现方法有重载，如果第二个参数不传就是打平一层，如果传了就是按照传入参数打平

@@ -14,6 +14,7 @@ type cases = [
 // ============= Your Code Here =============
 type IsNever<T> = [T] extends [never] ? true : false;
 
+// @answer-end
 // 知识点
 // 1. 00296-medium-permutation.ts 写过 never 无法 extends 自己
 namespace t1042 {

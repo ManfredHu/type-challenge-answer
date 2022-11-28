@@ -12,6 +12,7 @@ type cases = [
 // ============= Your Code Here =============
 type StringToUnion<T extends string> = T extends `${infer F}${infer R}` ? F | StringToUnion<R> : never
 
+// @answer-end
 // 知识点
 // 1. 用一个临时变量S = [] 递归统计，最后 Array 转 tuple 可以用 S[number]，很容易得到如下答案，但是不够优雅
 type StringToUnion2<T extends string, S extends string[] = []> =

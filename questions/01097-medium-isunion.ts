@@ -19,6 +19,7 @@ type cases = [
 // ============= Your Code Here =============
 type IsUnion<A, B = A> = A extends B ? ( [B] extends [A] ? false: true) : false
 
+// @answer-end
 // 知识点
 namespace t1097 {
   type b = IsUnion<"a" | "b" | "c" | 1>;

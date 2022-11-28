@@ -25,6 +25,7 @@ type FlipArguments<T extends Function> = T extends (...args: infer Args) => infe
   (...args: Reverse<Args>) => R
 ): T
 
+// @answer-end
 // 知识点
 namespace t3196 {
   // 1. 判断范型是函数

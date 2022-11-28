@@ -17,6 +17,7 @@ type cases = [
 type ArrGreaterThan<T extends 1[], U extends 1[]> = U extends [...T, ...any] ? false: true
 type GreaterThan<T extends number, U extends number> = ArrGreaterThan<NumStrToArray<`${T}`>, NumStrToArray<`${U}`>>
 
+// @answer-end
 // 知识点
 namespace t4425 {
   // 1. TS没有+1/-1能力，使用数组length属性代替，问题转化为比较 数组length属性，此时需要找一个中间值作为数组

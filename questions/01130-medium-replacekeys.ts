@@ -64,6 +64,7 @@ type ReplaceKeys<U, Keys, Target> = {
   [K in keyof U]: K extends Keys ? ( K extends keyof Target ? Target[K]: never) : U[K]
 }
 
+// @answer-end
 // 解析
 namespace t1130 {
 // 1. 迭代 U 里的每个 key，如果在Keys里，则替换为 Target 的类型。这里Nodes是union类型，所以 [K in keyof U] 里 K 是 type | name | flag | id 

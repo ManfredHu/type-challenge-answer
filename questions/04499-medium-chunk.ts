@@ -20,6 +20,7 @@ type Chunk<T extends any[], N extends number = 0, Temp extends any[] = []> = T e
                                                                               ? []
                                                                               : [Temp]
 
+// @answer-end
 // 知识点
 namespace t4499 {
   // 1. 很容易想到递归，拿一个临时数组Temp存一下打包的值，当达到第二个参数值限定时候将打包的Temp返回，继续递归直到最后

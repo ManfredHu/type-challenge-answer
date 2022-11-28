@@ -30,6 +30,7 @@ type Mutable<T extends object> = {
   - readonly [K in keyof T]: T[K]
 }
 
+// @answer-end
 // 知识点
 namespace t2793 {
   // 1. Readonly会把所有key都变成readonly

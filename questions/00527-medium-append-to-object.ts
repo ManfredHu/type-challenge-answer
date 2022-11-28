@@ -50,6 +50,7 @@ type AppendToObject<T, U extends string | number | symbol, V> = {
   [K in [U, keyof T][number]]: K extends keyof T ? T[K] : V
 }
 
+// @answer-end
 // 知识点
 // 1. 使用 [U, keyof T][number] 来获取新构建的数组 [U, keyof T] 的其中之一的元素
 // 注意这里 [keyof T][number] 的用法，先是生成一个数组，所以可以用数组的索引number来获取其中的元素

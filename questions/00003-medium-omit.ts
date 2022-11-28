@@ -31,6 +31,7 @@ interface Expected2 {
 // ============= Your Code Here =============
 type MyOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
+// @answer-end
 // 知识点
 // 1. keyof
 // 2. Exclude 可以用在key的位置

@@ -37,6 +37,7 @@ export type NumStrToArray<T extends string, Rst extends string[] = []> = T exten
 
 type MinusOne<T extends number> = NumStrToArray<`${T}`> extends ['', ...infer Rest] ? Rest['length']: never
 
+// @answer-end
 // 知识点
 namespace t2257 {
   // 1. TS没有数值计算，所以 === 这种不用想了，唯一可能是通过 xxx['length'] 获取

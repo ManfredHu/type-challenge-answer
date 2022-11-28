@@ -29,6 +29,7 @@ interface Expected {
 // ============= Your Code Here =============
 type MyReadonly2<T, K extends keyof T = keyof T> = Readonly<Pick<T, K>> & Omit<T, K>
 
+// @answer-end
 // 知识点
 // 1. K在对象推导里默认值是keyof T会获得到T的所有key，即此时 K = keyof T = 'title' | 'description' | 'completed'，所以Pick<T, K> = T, Omit<T, K> = {}
 type GetAllKeys<T> = keyof T

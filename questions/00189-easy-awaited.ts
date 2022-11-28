@@ -23,4 +23,4 @@ type MyAwaited<T extends Promise<unknown>> = T extends Promise<infer R>
     : R
   : never;
 
-//
+// @answer-end

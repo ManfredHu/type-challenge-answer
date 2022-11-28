@@ -31,6 +31,7 @@ type cases = [
 // ============= Your Code Here =============
 type RequiredByKeys<T, K extends PropertyKey = keyof T> = MergeObj<Required<Pick<T, K extends keyof T ? K : never>> & Omit<T, K>>
 
+// @answer-end
 // 知识点
 namespace t2759 {
   // 1. 与上题 PartialByKeys 类似，取两个对象类型做 Merge 操作，合并思路
