@@ -1,6 +1,6 @@
 {
   "name": "type-challenge-answer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use type-challenge for unit tests, including type-challenge answers. Automatically aggregates into a .d.ts file as a ts library.",
   "main": "./dist/index.d.ts",
   "packageManager": "pnpm@7.1.0",
