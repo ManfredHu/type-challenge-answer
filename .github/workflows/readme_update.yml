@@ -1,12 +1,12 @@
-name: readme Update
+name: readme update
 
 # push master or update readme every day at 00:00
 on:
   push:
     branches:
       - master
-  schedule:
-    - cron: "0 0 * * *"
+  # schedule:
+  #  - cron: "0 0 * * *"
   workflow_dispatch: {}
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 16.x
           cache: pnpm
-      - run: pnpm i
+      - run: npm run init
       - run: npm run readme
       - uses: EndBug/add-and-commit@v9
         with:
