@@ -64,5 +64,6 @@ async function main() {
   const text = genREADMECatalgory(filePathsWithRank)
   _debug(text)
   insertInfoReadme(path.resolve(__dirname, '../readme.md'), text)
+  insertInfoReadme(path.resolve(__dirname, '../readme_zh.md'), text)
 }
 main()

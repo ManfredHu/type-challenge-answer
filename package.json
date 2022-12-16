@@ -2,8 +2,8 @@
   "name": "type-challenge-answer",
   "version": "1.0.0",
   "description": "Use type-challenge for unit tests, including type-challenge answers. Automatically aggregates into a .d.ts file as a ts library.",
-  "main": "index.js",
-  "packageManager": "^pnpm@7.1.1",
+  "main": "./dist/index.d.ts",
+  "packageManager": "pnpm@7.1.1",
   "scripts": {
     "init": "npx pnpm i",
     "readme": "esno ./scripts/readme.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ManfredHu/typeChallenges.git"
+    "url": "git+https://github.com/ManfredHu/type-challenge-answer.git"
   },
   "keywords": [
     "type-challenge",
@@ -21,9 +21,9 @@
   "author": "ManfredHu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ManfredHu/typeChallenges/issues"
+    "url": "https://github.com/ManfredHu/type-challenge-answer/issues"
   },
-  "homepage": "https://github.com/ManfredHu/typeChallenges#readme",
+  "homepage": "https://github.com/ManfredHu/type-challenge-answer#readme",
   "dependencies": {
     "@types/node": "^18.6.4",
     "esno": "^0.16.3"
