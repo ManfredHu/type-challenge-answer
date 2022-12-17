@@ -5,6 +5,9 @@ on:
   push:
     tags:
       - 'v*'
+  # allow to run manually
+  workflow_dispatch: {}
+
 jobs:
   start: 
     runs-on: ubuntu-latest

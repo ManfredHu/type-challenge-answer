@@ -1,28 +1,39 @@
 name: readme update
 
 # push master or update readme every day at 00:00
+
+# listen on
 on:
+  # master push
   push:
     branches:
       - master
+  # run 0:00 every day 
   schedule:
-   - cron: "0 0 * * *"
+    - cron: "0 0 * * *"
+  # allow to run manually
   workflow_dispatch: {}
 
 jobs:
   start:
+    # define run environment
     runs-on: ubuntu-latest
     steps:
+      # checkout code
       - uses: actions/checkout@v2
+      # use pnpm and set version
       - uses: pnpm/action-setup@v2
         with:
           version: 7.1.0
+      # set node versiona and cache
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
           cache: pnpm
+      # run scripts
       - run: npm run init
       - run: npm run readme
+      # update readme
       - uses: EndBug/add-and-commit@v9
         with:
           message: "chore: update readme"
