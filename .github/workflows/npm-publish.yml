@@ -13,28 +13,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      # checkout code
+      - uses: actions/checkout@v2
       # use pnpm and set version
       - uses: pnpm/action-setup@v2
         with:
           version: 7.1.0
-      - uses: actions/setup-node@v3
+      # set node versiona and cache
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          registry-url: https://registry.npmjs.org/
+          node-version: 16.x
           cache: pnpm
       - run: npm run init
       - run: npm run readme
-      - run: npm run build
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
       - run: npm run build
       - run: npm publish
         env:
