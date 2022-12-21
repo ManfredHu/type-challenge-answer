@@ -1,0 +1,18 @@
+name: 'Master - PR Open'
+on:
+  # when some branch merge to master branch is opened
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+jobs:
+  add_comment:
+    name: 'Add Comment'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mshick/add-pr-comment@v1
+        with:
+          # auto comment message when master PR is opened
+          message: Please set a versioning label of either `major`, `minor`, or `patch` to the pull request.
+          repo-token: ${{ secrets.GH_TOKEN }}
