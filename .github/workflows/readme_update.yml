@@ -20,15 +20,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # checkout code
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # use pnpm and set version
       - uses: pnpm/action-setup@v2
         with:
           version: 7.1.0
       # set node versiona and cache
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 16
           cache: pnpm
       # run scripts
       - run: npm run init
