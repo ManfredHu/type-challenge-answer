@@ -37,7 +37,7 @@ jobs:
         # update version then push to master force
       - name: Git push version bump
         # --follow-tags will be create annotated tag which means includes message in git show
-        run: git push origin dev --follow-tags --force
+        run: git push origin master --follow-tags --force
       - id: set-version
         name: Output version change
         # get package.json version, but only effect after Node16+
