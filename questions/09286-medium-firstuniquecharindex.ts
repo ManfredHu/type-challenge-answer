@@ -31,5 +31,5 @@ namespace t9286 {
   // Result = [1], Last = 'a', F = 'a' Rest = 'bb'
   // Rest = 'bb' 不包含字母 'a'， 但是因为 F = 'a' 相当于 前置记录的Last包含了，应该继续下一次递归 FirstUniqueCharIndex<'bb', [1, 1], 'aa'>
   // Result = [1, 1], Last = 'aa', F = 'b' Rest = 'b'
-  // 知道最后 -1
+  // 直到最后 -1
 }
